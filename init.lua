@@ -41,7 +41,7 @@ local lazy_setup = function()
 end
 
 -- Is lazy already installed?
-local lazy_installed = vim.uv.fs_stat(lazy_path)
+local lazy_installed = vim.loop.fs_stat(lazy_path)
 
 if lazy_installed then
 	lazy_setup()
